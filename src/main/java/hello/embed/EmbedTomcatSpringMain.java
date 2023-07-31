@@ -9,6 +9,8 @@ import org.apache.catalina.startup.Tomcat;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+import java.io.File;
+
 public class EmbedTomcatSpringMain {
 
     public static void main(String[] args) throws LifecycleException {
@@ -29,6 +31,17 @@ public class EmbedTomcatSpringMain {
 
         // 디스패처 서블릿 등록
         Context context = tomcat.addContext("", "/");
+
+        File docBaseFile = new File(context.getDocBase());
+
+        if (!docBaseFile.isAbsolute()) {
+
+            docBaseFile = new File(((org.apache.catalina.Host) context.getParent()).getAppBaseFile(), docBaseFile.getPath());
+
+        }
+
+        docBaseFile.mkdirs();
+
         tomcat.addServlet("", "dispatcher", dispatcher);
         context.addServletMappingDecoded("/", "dispatcher");
 
