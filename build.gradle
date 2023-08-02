@@ -20,7 +20,8 @@ repositories {
 
 dependencies {
     // 내가 만든 라이브러리
-    implementation files('libs/memory-v1.jar')
+//    implementation files('libs/memory-v1.jar') // 자동 구성 적용 X
+    implementation files('libs/memory-v2.jar') // 자동 구성 적용 O
 
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-web'
