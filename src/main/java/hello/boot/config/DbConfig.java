@@ -1,4 +1,4 @@
-package hello.config;
+package hello.boot.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +11,7 @@ import org.springframework.transaction.TransactionManager;
 import javax.sql.DataSource;
 
 @Slf4j
-@Configuration
+//@Configuration    // 빈 등록 해제
 public class DbConfig {
 
     @Bean
