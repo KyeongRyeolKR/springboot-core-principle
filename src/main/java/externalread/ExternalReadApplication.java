@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Import;
 //@Import(MyDataSourceConfigV1.class)
 //@Import(MyDataSourceConfigV2.class)
 @Import(MyDataSourceConfigV3.class)
-@SpringBootApplication(scanBasePackages = "externalread.datasource")
+@SpringBootApplication(scanBasePackages = {"externalread.datasource", "externalread.pay"})
 // @EnableConfigurationProperties 를 사용할 필요 없이 알아서 @ConfigurationProperties 를 스캔하는 옵션
 @ConfigurationPropertiesScan
 public class ExternalReadApplication {
