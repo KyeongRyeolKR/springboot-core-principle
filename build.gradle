@@ -23,6 +23,7 @@ dependencies {
 //    implementation files('libs/memory-v1.jar') // 자동 구성 적용 X
     implementation files('libs/memory-v2.jar') // 자동 구성 적용 O
 
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
@@ -31,6 +32,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
     //테스트에서 lombok 사용
     testCompileOnly 'org.projectlombok:lombok'
