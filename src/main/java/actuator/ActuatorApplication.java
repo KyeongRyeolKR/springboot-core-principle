@@ -1,12 +1,24 @@
 package actuator;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class ActuatorApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ActuatorApplication.class, args);
+    }
+
+    /**
+     * HTTP 요청 응답 기록
+     * 최대 100개의 요청을 기록
+     * URL : /actuator/httpexchanges
+     */
+    @Bean
+    public InMemoryHttpExchangeRepository httpExchangeRepository() {
+        return new InMemoryHttpExchangeRepository();
     }
 }
