@@ -1,5 +1,12 @@
 # 액츄에이터 관련 설정(엔드포인트 활성화 및 노출)
 management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
   endpoint:
     shutdown:
       enabled: true
@@ -10,6 +17,14 @@ management:
     web:
       exposure:
         include: "*"
+
+info:
+  app:
+    name: hello-actuator
+    company: kr
+
+
+
 #my:
 #  datasource:
 #    url: local.db.com
