@@ -23,6 +23,11 @@ info:
     name: hello-actuator
     company: kr
 
+# 로그 설정
+logging:
+  level:
+    actuator.controller: debug
+
 
 
 #my:
