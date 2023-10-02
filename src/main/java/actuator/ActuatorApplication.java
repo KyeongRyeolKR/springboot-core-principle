@@ -4,6 +4,7 @@ import actuator.order.v0.OrderConfigV0;
 import actuator.order.v1.OrderConfigV1;
 import actuator.order.v2.OrderConfigV2;
 import actuator.order.v3.OrderConfigV3;
+import actuator.order.v4.OrderConfigV4;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +14,8 @@ import org.springframework.context.annotation.Import;
 //@Import(OrderConfigV0.class)
 //@Import(OrderConfigV1.class)
 //@Import(OrderConfigV2.class)
-@Import(OrderConfigV3.class)
+//@Import(OrderConfigV3.class)
+@Import(OrderConfigV4.class)
 @SpringBootApplication(scanBasePackages = "actuator.controller")
 public class ActuatorApplication {
 
